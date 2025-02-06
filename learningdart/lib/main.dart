@@ -77,26 +77,54 @@ void test() {
   // }
 }
 
+void plante() {
+  List<Fruit> Fruits = [
+    Fruit("Banane", 1.2),
+    Fruit("Pomme", 2),
+    Fruit("Fraise", 3)
+  ];
+  var VarFruits = Fruits.where((fruit) => fruit.prix > 1);
+  VarFruits.forEach((fruit) {
+    print('${fruit.name} : ${fruit.prix}');
+  });
+  Fruits.add(Fruit("Orange", 4));
+  // utilisation map
+  var fruitName = Fruits.map((fruit) => fruit.name).toList();
+  print(fruitName);
+}
+
+/**
+ * Exercice 1 : Variables et Types
+*/ //
+void declarationVarType() {
+  String nom = "Patrick";
+  int age = 32;
+  double prix = 12.3;
+  bool istrue = false;
+
+  print('je m appelle ${nom}:${age} ans :${prix} :${istrue}');
+}
+
+// exercice 2
+void listeBoucle() {
+  List<String> Fruits = ["Banane", "Pomme", "Fraise", "Tomate"];
+
+  // Fruits.forEach((fruit) => print(fruit));
+  for (int i = 0; i < Fruits.length; i++) {
+    print(Fruits[i]);
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
-    List<Fruit> Fruits = [
-      Fruit("Banane", 1.2),
-      Fruit("Pomme", 2),
-      Fruit("Fraise", 3)
-    ];
-    var VarFruits = Fruits.where((fruit) => fruit.prix > 1);
-    VarFruits.forEach((fruit) {
-      print('${fruit.name} : ${fruit.prix}');
-    });
-    Fruits.add(Fruit("Orange", 4));
-    // utilisation map
-    var fruitName = Fruits.map((fruit) => fruit.name).toList();
-    print(fruitName);
+    // test();
+    // plante();
+    // declarationVarType();
+    listeBoucle();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
