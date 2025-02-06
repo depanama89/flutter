@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 
+class Fruit {
+  String name;
+  double prix;
+
+  Fruit(this.name, this.prix);
+  void afficher() {
+    print('Fruit : $name, Prix : $prix');
+  }
+}
+
 void main() {
   runApp(const MyApp());
 }
@@ -38,7 +48,7 @@ void test() {
   //       tab[j + 1] = tempo;
   //     }
   //   }
-  // }
+  // }git
   // tab.add(100);
   // tab.removeAt(8);
   // for (var nombre in tab) {
@@ -74,6 +84,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     test();
+    List<Fruit> Fruits = [
+      Fruit("Banane", 1.2),
+      Fruit("Pomme", 2),
+      Fruit("Fraise", 3)
+    ];
+    var VarFruits = Fruits.where((fruit) => fruit.prix > 1);
+    VarFruits.forEach((fruit) {
+      print('${fruit.name} : ${fruit.prix}');
+    });
+    Fruits.add(Fruit("Orange", 4));
+    // utilisation map
+    var fruitName = Fruits.map((fruit) => fruit.name).toList();
+    print(fruitName);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
