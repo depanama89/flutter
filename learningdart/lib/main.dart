@@ -84,34 +84,32 @@ void plante() {
     Fruit("Fraise", 3)
   ];
   var VarFruits = Fruits.where((fruit) => fruit.prix > 1);
-  VarFruits.forEach((fruit) {
+  for (var fruit in VarFruits) {
     print('${fruit.name} : ${fruit.prix}');
-  });
+  }
   Fruits.add(Fruit("Orange", 4));
   // utilisation map
   var fruitName = Fruits.map((fruit) => fruit.name).toList();
   print(fruitName);
 }
 
-/**
- * Exercice 1 : Variables et Types
-*/ //
+/// Exercice 1 : Variables et Types //
 void declarationVarType() {
   String nom = "Patrick";
   int age = 32;
   double prix = 12.3;
   bool istrue = false;
 
-  print('je m appelle ${nom}:${age} ans :${prix} :${istrue}');
+  print('je m appelle $nom:$age ans :$prix :$istrue');
 }
 
 // exercice 2
 void listeBoucle() {
-  List<String> Fruits = ["Banane", "Pomme", "Fraise", "Tomate"];
+  List<String> fruits = ["Banane", "Pomme", "Fraise", "Tomate"];
 
   // Fruits.forEach((fruit) => print(fruit));
-  for (int i = 0; i < Fruits.length; i++) {
-    print(Fruits[i]);
+  for (int i = 0; i < fruits.length; i++) {
+    print(fruits[i]);
   }
 }
 
