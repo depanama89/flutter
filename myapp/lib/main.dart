@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/myFirstApp.dart';
+import 'package:myapp/screens/home_screen.dart';
 
 // void main() => runApp(const MaterialApp(
 //       home: MyFirstApp(),
@@ -34,14 +35,5 @@ class MyApp extends StatelessWidget {
           )),
       home: HomeScreen(),
     );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }
